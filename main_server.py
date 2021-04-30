@@ -20,6 +20,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--debug', action='store_true',
                         help='The present debug message')
+    parser.add_argument('--address', type=str, default='',
+                        help='The server bind address')
+    parser.add_argument('--port', type=int, default=6292,
+                        help='The server service port')
 
     FLAGS, _ = parser.parse_known_args()
     DEBUG = FLAGS.debug
